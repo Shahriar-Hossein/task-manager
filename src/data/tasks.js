@@ -1,0 +1,38 @@
+export const tasksData = [
+    {
+      id: 1,
+      assigned_to: "Siddik",
+      image_link: "src/assets/abs picture.jpg",
+      name: "Product 1",
+      time: "13/07/2025 09:30am",
+      description: "Task Description: Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem",
+      tags: ["Good First Issue", "Bug Fix"],
+    },
+    {
+      id: 2,
+      assigned_to: "Dev",
+      image_link: "src/assets/dev_image.jpg",
+      name: "Language Translation ",
+      time: "13/07/2025 12:30pm",
+      description: "Task Description: Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem",
+      tags: ["Good First Issue", "Bug Fix"],
+    },
+    {
+      id: 3,
+      assigned_to: "Web Dev",
+      image_link: "src/assets/web_developer.png",
+      name: "Product 2",
+      time: "14/07/2025 10:00am",
+      description: "Task Description: Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem",
+      tags: ["Good First Issue", "Bug Fix"],
+    },
+    {
+      id: 4,
+      assigned_to: null,
+      image_link: "src/assets/GvzmgDcboAA-57z.jpg",
+      name: "In app review modal",
+      time: "15/07/2025 09:30am",
+      description: "Task Description: Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem",
+      tags: ["Good First Issue", "Bug Fix"],
+    },
+  ];
