@@ -1,6 +1,7 @@
 export const tasksData = [
     {
       id: 1,
+      status: 'to-do',
       assigned_to: "Siddik",
       image_link: "src/assets/abs picture.jpg",
       name: "Product 1",
@@ -10,6 +11,7 @@ export const tasksData = [
     },
     {
       id: 2,
+      status: 'to-do',
       assigned_to: "Dev",
       image_link: "src/assets/dev_image.jpg",
       name: "Language Translation ",
@@ -19,6 +21,7 @@ export const tasksData = [
     },
     {
       id: 3,
+      status: 'in-progress',
       assigned_to: "Web Dev",
       image_link: "src/assets/web_developer.png",
       name: "Product 2",
@@ -28,6 +31,7 @@ export const tasksData = [
     },
     {
       id: 4,
+      status: 'done',
       assigned_to: null,
       image_link: "src/assets/GvzmgDcboAA-57z.jpg",
       name: "In app review modal",

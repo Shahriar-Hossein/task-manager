@@ -28,11 +28,13 @@ function TaskCard ({ task }) {
           {task.description}
         </div>
         <div className="my-2 flex gap-2">
-          {task.tags.map( (tag,tagIndex) =>{
+          <TaskTagCapsule label={task.tag} />
+          {/* If task tags are array use below code */}
+          {/* {task.tags.map( (tag,tagIndex) =>{
             return (
               <TaskTagCapsule key={tagIndex} label={tag} />
             )
-          })}
+          })} */}
         </div>
       </div>
 

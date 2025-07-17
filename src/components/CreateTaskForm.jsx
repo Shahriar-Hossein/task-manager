@@ -1,12 +1,29 @@
+import { useState } from "react";
 import { useFormStatus } from "react-dom"
 
-function CreateTaskForm() {
-  
+function CreateTaskForm({addTask, tasks}) {
   const { pending } = useFormStatus();
+  const defaultTask = {
+    id: tasks.at(-1).id + 1,
+    status: 'to-do',
+    assigned_to: null,
+    image_link: 'src/assets/GvzmgDcboAA-57z.jpg',
+    name: "",
+    time: Date.now(),
+    description: "",
+    tags: ["Good First Issue"],
+    tag: 'Bug Fix',
+  }
 
-  const createTask = (formData) => {
-    console.log(formData.get('assigned_to'));
-    
+  const [task, setTask] = useState(defaultTask);
+  const handleForm = (event) => {
+    setTask({
+      ...task,
+      [event.target.name]: event.target.value
+    })
+  }
+  const createTask = () => {
+    addTask(()=>[...tasks, task]);
   }
 
   return (
@@ -14,48 +31,52 @@ function CreateTaskForm() {
       <div className="py-2 mx-auto min-w-2xl px-4">
         <form action={createTask} className="flex">
           <div className="flex flex-col">
-            <label for="assigned_to" className="m-1 ml-4 "> Assign To</label>
+            <label htmlFor="assigned_to" className="m-1 ml-4 "> Assign To</label>
             <input 
               type="text"
               name="assigned_to"
               placeholder="Enter Full Name"
-              required
+              onChange={handleForm}
               className="border border-cyan-300 rounded-full px-4 py-1 ml-4 focus:border-cyan-500 focus:outline-cyan-500 focus:inset-shadow-cyan-500/50"
             />
           </div>
 
           <div className="flex flex-col">
-            <label for="task_name" className="m-1 ml-8 "> Task Name </label>
+            <label htmlFor="name" className="m-1 ml-8 "> Task Name </label>
             <input 
               type="text"
-              name="task_name"
+              name="name"
               placeholder="Enter Task Name"
+              onChange={handleForm}
               required
               className="border border-cyan-300 rounded-full px-4 py-1 ml-4 focus:border-cyan-500 focus:outline-cyan-500 focus:inset-shadow-cyan-500/50"
             />
           </div>
           <div className="flex flex-col">
-            <label for="task_description" className="m-1 ml-8 "> Task Description </label>
+            <label htmlFor="description" className="m-1 ml-8 "> Task Description </label>
             <textarea 
               type="textarea"
-              name="task_description"
+              name="description"
               placeholder="Enter Task Description"
               rows={3}
               cols={30}
+              onChange={handleForm}
               required
               className="border border-cyan-300 rounded-full px-4 py-1 ml-4 focus:border-cyan-500 focus:outline-cyan-500 focus:inset-shadow-cyan-500/50"
             />
           </div>
           <div className="flex flex-col">
-            <label for="task_tag" className="m-1 ml-6 "> Task tag</label>
+            <label htmlFor="tag" className="m-1 ml-6 "> Task tag</label>
             <select 
               type="select"
-              name="task_tag"
-              placeholder="Select tags"
+              name="tag"
+              placeholder="Select tag"
+              onChange={handleForm}
+              defaultValue={""}
               required
               className="border border-cyan-300 rounded-full px-4 py-1 ml-4 focus:border-cyan-500 focus:outline-cyan-500 focus:inset-shadow-cyan-500/50"
             >
-              <option value="" disabled selected > Select Tag</option>
+              <option value="" disabled> Select Tag</option>
               <option value="bug fix"> Bug Fix </option>
               <option value="good first issue"> Good First Issue </option>
               <option value="ui fix"> UI Fix </option>
