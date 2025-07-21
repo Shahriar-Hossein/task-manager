@@ -5,7 +5,7 @@ function Navbar() {
   ];
   return (
     <>
-      <nav className="bg-cyan-50 flex justify-between">
+      <nav className="bg-cyan-50 flex justify-between sticky top-0 backdrop-blur-2xl py-2">
         <div className="font-bold text-2xl text-blue-500"> TaskManager </div>
         <div className="max-w-7xl p-2 px-2 sm:px-6 md:px-8">
           <ul className="flex justify-center gap-4 sm:gap-0 md:gap-6">

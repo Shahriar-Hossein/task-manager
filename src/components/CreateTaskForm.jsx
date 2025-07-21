@@ -23,12 +23,12 @@ function CreateTaskForm({addTask, tasks}) {
     })
   }
   const createTask = () => {
-    addTask(()=>[...tasks, task]);
+    addTask((tasks)=>[...tasks, task]);
   }
 
   return (
     <>
-      <div className="py-2 mx-auto min-w-2xl px-4">
+      <div className="py-2 my-2 mx-auto min-w-2xl px-4">
         <form action={createTask} className="flex">
           <div className="flex flex-col">
             <label htmlFor="assigned_to" className="m-1 ml-4 "> Assign To</label>
