@@ -2,21 +2,24 @@ import TaskList from "./TaskList"
 import { useMemo } from "react"
 
 function Tasks( {tasks}) {
+  // const getTasksByStatus = (status)=> {
+  //   useMemo( ()=> tasks?.filter( (task) => task.status === status ), [tasks] );
+  // }
   const todoTasks = useMemo( ()=> {
     return tasks?.filter((task)=>{
       return task.status === 'to-do';
     });
-  }, tasks)
+  }, [tasks])
   const inprogressTasks = useMemo( ()=> {
     return tasks?.filter((task)=>{
       return task.status === 'in-progress';
     });
-  }, tasks)
+  }, [tasks])
   const doneTasks = useMemo( ()=> {
     return tasks?.filter((task)=>{
       return task.status === 'done';
     });
-  }, tasks)
+  }, [tasks])
   
   return (
     <>
